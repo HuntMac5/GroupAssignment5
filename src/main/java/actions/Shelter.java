@@ -32,16 +32,12 @@ public class Shelter<T extends Pets> {
 	}
 	/**
 	 * sorts by pets by name, additions for age and species 
+	 * may change for comparator use
 	 */
 	public void sortPetName() {
 		pets.sort((p1, p2) -> p1.getName().compareTo(p2.getName()));
 	}
-	/**
-	 * Sorts by species 
-	 */
-	public void sortPetSpecies() {
-		pets.sort((p1, p2) -> p1.getSpecies().compareTo(p2.getSpecies()));
-	}
+
 	/**
 	 * Method for adopting pets or informing already / unfound
 	 * @param pet
