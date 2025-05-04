@@ -6,7 +6,14 @@ public class ExoticAnimals {
 	private String category;
 	private String subSpecies;
 	private int yearsOld;
-	
+/**
+ * Constructor for Exotic pets 
+ * @param uniqueId
+ * @param animalName
+ * @param category
+ * @param subSpecies
+ * @param yearsOld
+ */
 	public ExoticAnimals(String uniqueId, String animalName, String category, String subSpecies, int yearsOld) {
 		this.uniqueId = uniqueId;
 		this.animalName = animalName;
