@@ -17,7 +17,7 @@ public class ExoticAnimalAdaptor extends Pets {
 	 */
 	@Override
 	public void displayDetails() {
-		System.out.println("name: " + getName() + "/nAge: " + getAge() + "/nSpecies: " + getSpecies());
+		System.out.println("Name: " + getName() + "\nAge: " + getAge() + "\nSpecies: " + getSpecies());
 	}
 	
 	public ExoticAnimals getExoticAnimal() {
