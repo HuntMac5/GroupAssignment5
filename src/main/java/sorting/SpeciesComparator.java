@@ -1,7 +1,6 @@
 package sorting;
 
 import java.util.Comparator;
-
 import animals.Pets;
 
 public class SpeciesComparator implements Comparator<Pets> {
