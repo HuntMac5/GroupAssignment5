@@ -2,7 +2,10 @@ package actions;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import com.google.gson.Gson;
 
@@ -45,5 +48,14 @@ public class PetManager {
 			shelter.addPet(new ExoticAnimalAdapter(pet));
 		}
 		reader.close();
+	}
+	
+	//save the pet list back to JSON file, for the saved file name, use the current date and time
+	public void savePetstoJSON() throws IOException {
+		Gson gson = new Gson();
+		String filename = new SimpleDateFormat("yyyMMdd HHmmss").format(new Date()) + "pets.json";
+		
+		FileWriter writer = new FileWriter(filename);
+		gson.toJson(shelter.getPets(), writer);
 	}
 }
