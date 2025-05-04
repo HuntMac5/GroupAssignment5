@@ -1,7 +1,13 @@
 package actions;
 
 import java.util.List;
+
+import animals.ExoticAnimal;
+import animals.Pets;
+
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Shelter<T extends Pets> {
 	private List<T> pets;
@@ -17,8 +23,8 @@ public class Shelter<T extends Pets> {
 		pets.add(pet);
 	}
 	
-	public void addExoticAnimal(ExoticAnimals exoticAnimal) {
-		Pets adaptedPet = new ExoticAnimalAdaptor(exoticAnimal);
+	public void addExoticAnimal(ExoticAnimal exoticAnimal) {
+		Pets adaptedPet = new ExoticAnimalAdapter(exoticAnimal);
 		pets.add((T)adaptedPet);
 			
 	}
@@ -34,8 +40,9 @@ public class Shelter<T extends Pets> {
 	 * sorts by pets by name, additions for age and species 
 	 * may change for comparator use
 	 */
-	public void sortPetName() {
+	public void sortPetName(Comparator<Pets> comparator) {
 		pets.sort((p1, p2) -> p1.getName().compareTo(p2.getName()));
+		//Collections.sort(pets, comparator);
 	}
 
 	/**

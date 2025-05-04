@@ -1,6 +1,6 @@
-package actions;
+package animals;
 
-public abstract class Pets {
+public abstract class Pets implements Comparable<Pets>{
 	private String name;
 	private int age;
 	private String species;
@@ -44,7 +44,12 @@ public abstract class Pets {
 		}
 	}
 /**
- * Abstract method ti display details
+ * Abstract method to display details
  */
 	public abstract void displayDetails();
+	
+	@Override
+	public int compareTo(Pets pet) {
+		return this.name.compareTo(pet.name);
+	}
 }

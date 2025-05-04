@@ -1,13 +1,16 @@
 package actions;
 
-public class ExoticAnimalAdaptor extends Pets {
+import animals.ExoticAnimal;
+import animals.Pets;
+
+public class ExoticAnimalAdapter extends Pets {
 	
-	private ExoticAnimals exoticAnimal;
+	private ExoticAnimal exoticAnimal;
 	/**
 	 * Wraps animals as a pet class
 	 * @param exoticAnimal
 	 */
-	public ExoticAnimalAdaptor(ExoticAnimals exoticAnimal) {
+	public ExoticAnimalAdapter(ExoticAnimal exoticAnimal) {
 		super(exoticAnimal.getAnimalName(), exoticAnimal.getYearsOld(), exoticAnimal.getCategory());
 		this.exoticAnimal = exoticAnimal;
 
@@ -20,7 +23,7 @@ public class ExoticAnimalAdaptor extends Pets {
 		System.out.println("Name: " + getName() + "\nAge: " + getAge() + "\nSpecies: " + getSpecies());
 	}
 	
-	public ExoticAnimals getExoticAnimal() {
+	public ExoticAnimal getExoticAnimal() {
 		return exoticAnimal;
 	}
 }

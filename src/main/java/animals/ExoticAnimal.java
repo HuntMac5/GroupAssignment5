@@ -1,6 +1,6 @@
-package actions;
+package animals;
 
-public class ExoticAnimals {
+public class ExoticAnimal{
 	private String uniqueId;
 	private String animalName;
 	private String category;
@@ -14,7 +14,7 @@ public class ExoticAnimals {
  * @param subSpecies
  * @param yearsOld
  */
-	public ExoticAnimals(String uniqueId, String animalName, String category, String subSpecies, int yearsOld) {
+	public ExoticAnimal(String uniqueId, String animalName, String category, String subSpecies, int yearsOld) {
 		this.uniqueId = uniqueId;
 		this.animalName = animalName;
 		this.category = category;
@@ -41,5 +41,4 @@ public class ExoticAnimals {
 	public int getYearsOld() {
 		return yearsOld;
 	}
-	
 }
