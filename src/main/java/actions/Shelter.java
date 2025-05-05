@@ -2,11 +2,11 @@ package actions;
 
 import java.util.List;
 
+
 import animals.ExoticAnimal;
 import animals.Pets;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Shelter<T extends Pets> {
@@ -23,6 +23,7 @@ public class Shelter<T extends Pets> {
 		pets.add(pet);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void addExoticAnimal(ExoticAnimal exoticAnimal) {
 		Pets adaptedPet = new ExoticAnimalAdapter(exoticAnimal);
 		pets.add((T)adaptedPet);
